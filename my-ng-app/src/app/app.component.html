@@ -1,0 +1,19 @@
+<h1>Countries (Angular)</h1>
+<item-list #itemList>
+  <ng-template
+    itemTemplate
+    let-index="index"
+    let-item="item"
+    let-clickcallback="onClick"
+  >
+    <div>
+      #{{ index }} - <strong>{{ item }}</strong>
+    </div>
+    <div style="text-align: right">
+      <button (click)="clickcallback($event)">Select</button>
+    </div>
+  </ng-template>
+</item-list>
+<div>
+  You are currently selecting <strong>{{ selectedCountry }}</strong>
+</div>
